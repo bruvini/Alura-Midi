@@ -2,8 +2,12 @@ function tocaSomPom(){
     document.querySelector('#som_tecla_pom').play();
 }
 
-function tocaSomClap(){
-    document.querySelector('#som_tecla_clap').play();
-}
+const listaDeTeclas = document.querySelectorAll('.tecla');
 
-const listDeTeclas = document.querySelectorAll('.tecla');
+let cont = 0;
+
+while (cont < listaDeTeclas.length) {
+    listaDeTeclas[cont].onclick = tocaSomPom;
+    cont = cont + 1;
+    console.log(cont);
+}
